@@ -39,6 +39,32 @@ app.post("/api/notes", function(req, res) {
 res.json(userNote);
 })
 
+
+
+app.delete("/api/notes/:id", function(req, res) {
+    const remove = req.params.id;
+    const data = fs.readFileSync(__dirname + "/develop/db/db.json",);
+    const product =JSON.parse(data)
+    
+    for(let i = 0; i < product.length; i++) {
+        if(product[i].id == remove) {
+        product.splice(i, 1)
+        res.json(product)
+          
+        }
+    
+    
+    }
+
+    fs.writeFile(__dirname + "/develop/db/db.json", JSON.stringify(product), "utf-8", function(err) {
+        if (err) throw err
+        console.log("success")
+    })
+
+
+
+})
+
 app.listen(port, function() {
     console.log("server listening on: http://localhost:" + port)
 })
