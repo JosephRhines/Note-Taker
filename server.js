@@ -34,7 +34,7 @@ app.post("/api/notes", function(req, res) {
     product.push(userNote)
       fs.writeFile(__dirname + "/develop/db/db.json", JSON.stringify(product), "utf-8", function(err) {
           if (err) throw err
-          console.log("success")
+          
       })  
 res.json(userNote);
 })
@@ -58,7 +58,7 @@ app.delete("/api/notes/:id", function(req, res) {
 
     fs.writeFile(__dirname + "/develop/db/db.json", JSON.stringify(product), "utf-8", function(err) {
         if (err) throw err
-        console.log("success")
+        
     })
 
 
