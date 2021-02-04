@@ -19,7 +19,7 @@ notes and is presented with a trash icon which can be clicked to delete the note
 <img src="./Develop/images/note.jpeg">
 <br>
 
-## Github, Heroku, and Walkthrough Links:
+## Github and Heroku Links:
 
 https://github.com/JosephRhines/Note-Taker
 
