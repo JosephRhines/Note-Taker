@@ -3,7 +3,7 @@ var express = require("express");
 var path = require("path");
 var notes = []
 var app = express();
-var port = process.env.port || 3000;
+var port = process.env.PORT || 8080;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
